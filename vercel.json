@@ -2,7 +2,10 @@
   "version": 2,
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/server/server.js" },
-    { "source": "/((?!api/|assets/|.*\\..*).*)", "destination": "/client/index.html" }
+    { "source": "/assets/(.*)", "destination": "/client/assets/$1" },
+    { "source": "/projects/(.*)", "destination": "/client/projects/$1" },
+    { "source": "/resume.pdf", "destination": "/client/resume.pdf" },
+    { "source": "/((?!api/|assets/|projects/|resume.pdf|.*\\..*).*)", "destination": "/client/index.html" }
   ],
   "builds": [
     {
