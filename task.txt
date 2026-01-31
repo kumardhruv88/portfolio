@@ -1,0 +1,930 @@
+# NEURAL PORTFOLIO - Complete Project Specification
+## AI/ML Developer Portfolio with Neural Network-Inspired Design
+
+**Developer:** Dhruv Kumar  
+**Domain:** AI/ML/Deep Learning  
+**Tech Stack:** MERN (MongoDB, Express.js, React, Node.js)  
+**Deployment:** 100% Free (Vercel + Render + MongoDB Atlas)
+
+---
+
+## 🎯 PROJECT VISION
+
+Create a **visually stunning, technically impressive** portfolio website that:
+- Showcases AI/ML expertise through neural network-inspired design
+- Serves as a **daily learning journal** via integrated blog
+- Demonstrates **full-stack development** capabilities
+- Attracts recruiters with **unique, memorable aesthetics**
+- Provides **production-grade** user experience
+
+---
+
+## 🎨 DESIGN PHILOSOPHY
+
+### Core Concept: "Neural Synapses"
+The portfolio embodies interconnected neural networks through:
+- Animated neural pathways connecting sections
+- Synaptic firing effects on hover/scroll
+- 3D neuron visualizations as transitions
+- Glassmorphism layers (like neural layers)
+- Particle systems (neural signal propagation)
+- Parallax scrolling (depth perception)
+
+### Visual Identity (Inspired by Reference)
+**Color Palette:**
+- Deep Space Navy: #0a0e27 (primary background)
+- Neural Pink: #ff0080 to #ff4da6 (gradients)
+- Accent Purple: #9d4edd to #c77dff (glows)
+- Electric Blue: #00d9ff (highlights)
+- Off-White: #f8f9fa (text/glass)
+
+**Typography:**
+- Display: "Orbitron" or "Exo 2" (futuristic)
+- Headings: "Space Grotesk" (geometric)
+- Body: "Inter" (readability)
+- Code: "JetBrains Mono"
+
+---
+
+## 📋 COMPLETE FEATURE LIST
+
+### 1. HOMEPAGE / HERO SECTION
+**Elements:**
+- Full-screen 3D neural network (Three.js)
+- Animated particles forming connections
+- Pulsing central neuron node with gradient
+- Typewriter effect: "DHRUV KUMAR"
+- Rotating subtitle: "AI/ML Engineer | Deep Learning Specialist | GenAI Developer"
+- CTA Buttons:
+  * "Explore Projects" (neural pulse)
+  * "View Resume" (glass effect)
+  * "Read My Journey" (blog link)
+
+**Scroll Features:**
+- Glowing neural pathway from hero to next section
+- Synaptic nodes at section junctions
+- Smooth parallax scrolling
+
+**Quick Stats (Animated):**
+- Projects: 4+
+- Technologies: 15+
+- Lines of Code: 10,000+
+- Blog Posts: [Dynamic count]
+
+**Highlight Badges:**
+- 🏆 SIH 2025 Winner
+- 🚀 Latest Project card
+- 📚 Recent Blog preview
+
+---
+
+### 2. ABOUT SECTION
+**Layout:** Split-screen glassmorphism
+
+**Content:**
+```
+Left: 3D avatar with neural glow border
+Right: Bio with animated connections
+
+"A passionate AI/ML Engineer specializing in Deep Learning, NLP, and 
+Generative AI. Winner of Smart India Hackathon 2025, I build intelligent 
+systems that solve real-world problems.
+
+Currently pursuing B.Tech in CS at NSUT Delhi, combining academic 
+excellence with hands-on experience in cutting-edge ML technologies."
+```
+
+**What I Do (Interactive Nodes):**
+- 🧠 AI/ML Development (TensorFlow, PyTorch, Scikit-learn)
+- 🤖 Deep Learning (CNNs, RNNs, Transformers)
+- 💬 GenAI & LLMs (RAG, fine-tuning, prompt engineering)
+- 📊 Data Science (feature engineering, statistical modeling)
+- 🎯 Problem Solving (translating requirements to solutions)
+
+---
+
+### 3. EDUCATION SECTION
+**Design:** Timeline with neural paths
+
+```
+🎓 B.Tech in Computer Science Engineering
+   Netaji Subhas University of Technology (NSUT), New Delhi
+   2023 – 2027 | CGPA: 7.05/10
+
+Relevant Coursework (as neural network):
+• Data Structures & Algorithms
+• Machine Learning & Deep Learning  
+• Object-Oriented Programming
+• Database Management Systems
+• Statistical Methods
+• Linear Algebra & Probability
+```
+
+---
+
+### 4. EXPERIENCE SECTION
+
+#### Experience 1: Smart India Hackathon 2025 Winner
+```
+AI/ML Developer — BharatVerse Project
+AICTE & Ministry of Culture, Govt. of India
+Dec 2024 – Jan 2025
+
+🎯 Challenge:
+Built AI storytelling system for Indian mythological narratives in 
+multiple native languages.
+
+🛠️ Technical Implementation:
+• Multimodal AI Pipeline:
+  - Semantic Search: Transformer embeddings
+  - Narrative Gen: Qwen LLM
+  - Vector DB: FAISS (10K+ cultural refs)
+  - Audio: Multilingual TTS (5 languages)
+
+• Performance:
+  - Reduced latency: 30s → 5-7s
+  - Batch processing, caching, optimized prompts
+  
+• Accuracy:
+  - Fine-tuned models on authentic texts
+  - Validation: 95%+ cultural accuracy
+
+🏆 Achievement:
+• 1st place among 1,000+ teams
+• Real-time generation <7s
+• 5 languages (Hindi, Tamil, Telugu, Bengali, Gujarati)
+
+🔧 Tech: Python, Transformers, Qwen, FAISS, LangChain, FastAPI
+```
+
+#### Experience 2: Independent AI/ML Developer
+```
+Sep 2024 – Present
+
+• Production-grade AI applications
+• Research in LLMs, RAG, multimodal AI
+• Open-source contributions
+• Technical blogging (50+ posts)
+```
+
+---
+
+### 5. TECHNICAL SKILLS
+
+**Interactive Neural Network Visualization**
+
+**Programming Languages:**
+- Python ⭐⭐⭐⭐⭐
+- Java ⭐⭐⭐⭐
+- SQL ⭐⭐⭐⭐
+- JavaScript ⭐⭐⭐
+
+**Machine Learning:**
+- TensorFlow, Keras, PyTorch
+- Scikit-learn
+- Supervised/Unsupervised Learning
+- Transfer Learning, Feature Engineering
+- Hyperparameter Tuning, Cross-Validation
+
+**Deep Learning:**
+- CNN, RNN, LSTM
+- Transformers (BERT, GPT, T5)
+- Computer Vision
+- Sequence Models
+
+**NLP:**
+- Hugging Face Transformers
+- NLTK, SpaCy
+- Text Classification, NER
+- Sentiment Analysis
+- Tokenization, Embeddings
+
+**Generative AI:**
+- LLMs (GPT-4, Claude, Gemini, Qwen, LLaMA)
+- RAG (Retrieval-Augmented Generation)
+- Vector DBs (FAISS, Pinecone, ChromaDB)
+- LangChain
+- Prompt Engineering
+- Fine-tuning (LoRA, QLoRA)
+
+**Data Science:**
+- Pandas, NumPy
+- Matplotlib, Seaborn, Plotly
+- EDA, Statistical Testing
+- A/B Testing, Time Series
+
+**Backend:**
+- Flask, FastAPI
+- Node.js, Express.js
+- SQL (PostgreSQL, MySQL)
+- MongoDB
+- RESTful APIs
+
+**Tools:**
+- Git & GitHub
+- Jupyter, Google Colab
+- VS Code, PyCharm
+- Docker
+- Vercel, Render, Streamlit
+
+---
+
+### 6. PROJECTS SECTION
+
+**Design:** Masonry grid, neural glow on hover
+
+---
+
+#### PROJECT 1: House Price Prediction Model
+
+**Overview:**
+End-to-end regression model predicting residential prices with 86.29% accuracy (R² = 0.8629).
+
+**Problem:**
+Complex relationships between 80+ features, missing values, non-linearity.
+
+**Technical Implementation:**
+
+1. **Data Preprocessing:**
+   - Missing value imputation (domain-specific)
+   - Outlier removal (>4000 sq ft, <$200k)
+   - 80+ features → Correlation analysis (VIF < 10)
+
+2. **Feature Engineering:**
+   ```python
+   # Polynomial features
+   - TotalSF = GrLivArea + TotalBsmtSF
+   - OverallScore = OverallQual * OverallCond
+   
+   # Interaction terms
+   - GrLivArea_x_OverallQual
+   - YearBuilt_x_YearRemodAdd
+   
+   # Log transformations
+   - SalePrice, LotArea, GrLivArea
+   
+   # Time-based
+   - Age = YearSold - YearBuilt
+   ```
+
+3. **Models Tested:**
+   - Linear Regression: R² = 0.74
+   - Ridge (L2): R² = 0.76
+   - Lasso (L1): R² = 0.75
+   - Random Forest: R² = 0.82
+   - XGBoost: R² = 0.86
+   - **Stacked Ensemble: R² = 0.8629**
+
+4. **Validation:**
+   - Stratified 5-Fold CV: R² = 0.865 (±0.012)
+   - Test RMSE: $21,847
+   - MAPE: 8.3%
+
+**Results:**
+✅ 86.29% variance explained  
+✅ 12% improvement over baseline  
+✅ 78% predictions within ±10%
+
+**Tech:** Python, Pandas, Scikit-learn, XGBoost, Jupyter
+
+🔗 [Live Demo] | 💻 [GitHub] | 📊 [Kaggle]
+
+---
+
+#### PROJECT 2: RAG-Based AI Chatbot
+
+**Overview:**
+Production chatbot with RAG, web search, document processing, image generation, and persistent memory.
+
+**Features:**
+- Real-time web search (Tavily API)
+- PDF/DOCX semantic search (FAISS)
+- Multi-turn conversations (PostgreSQL memory)
+- Image generation (Stability AI)
+- ChatGPT-like interface
+
+**Architecture:**
+```
+User Query → Intent Classification
+    ↓
+[WEB_SEARCH | DOCUMENT_RAG | IMAGE_GEN | DIRECT_LLM]
+    ↓
+Context Augmentation → LLM (Groq API)
+    ↓
+Response + Memory Update
+```
+
+**Key Components:**
+
+1. **RAG Pipeline:**
+   ```python
+   # Document processing
+   RecursiveCharacterTextSplitter(chunk_size=1000, overlap=200)
+   
+   # Embeddings
+   HuggingFaceEmbeddings("all-MiniLM-L6-v2")  # 384-dim
+   
+   # Vector store
+   FAISS.from_documents()
+   
+   # Retrieval
+   similarity_search(query, k=5)
+   ```
+
+2. **Web Search:**
+   ```python
+   tavily_client.search(query, depth="advanced", max_results=5)
+   ```
+
+3. **LLM Generation:**
+   ```python
+   groq_client.chat.completions.create(
+       model="llama-3.1-70b-versatile",
+       messages=[system, user],
+       temperature=0.7
+   )
+   ```
+
+4. **Conversation Memory:**
+   ```sql
+   threads: [id, user_id, title, created_at]
+   messages: [id, thread_id, role, content, timestamp]
+   ```
+
+**Performance:**
+✅ Avg response: 2.3s  
+✅ FAISS accuracy: 89% (top-5)  
+✅ 1000+ concurrent threads
+
+**Tech:** FastAPI, Python, LangChain, FAISS, Groq, Tavily, PostgreSQL
+
+🔗 [Live Demo] | 💻 [GitHub]
+
+---
+
+#### PROJECT 3: ARTISIO E-Commerce Platform
+
+**Overview:**
+Full-stack MERN e-commerce for artisan businesses. 100% free deployment.
+
+**Features:**
+**Customer:**
+- Advanced filtering (10+ criteria)
+- Subscription boxes with AI curation
+- Artisan storytelling
+- Stripe checkout
+- Order tracking
+- Wishlist, reviews
+
+**Admin:**
+- Product CRUD with bulk ops
+- Inventory management + forecasting
+- Order management
+- Customer segmentation
+- Sales analytics
+- Promo codes
+- Blog CMS
+
+**Technical Highlights:**
+
+1. **Advanced Search:**
+   ```javascript
+   // MongoDB aggregation + full-text search
+   Product.find({ 
+       $text: { $search: query },
+       category, price: { $gte, $lte },
+       dietaryTags: { $in }, stock: { $gt: 0 }
+   })
+   ```
+
+2. **Subscription AI:**
+   ```javascript
+   // Curate box based on:
+   - User preferences (dietary, categories)
+   - Collaborative filtering
+   - Content variety (max 2 per category)
+   - Budget constraints
+   ```
+
+3. **Stripe Integration:**
+   ```javascript
+   // Checkout → Webhook → Order Creation
+   stripe.checkout.sessions.create()
+   stripe.webhooks.constructEvent()
+   ```
+
+**Performance:**
+✅ Load time: <2s (Lighthouse 95+)  
+✅ API response: <200ms  
+✅ Image optimization: 70% reduction  
+✅ Cost: $0/month (vs Shopify $29-299)
+
+**Tech:** React, Node.js, MongoDB, Stripe, Cloudinary, Vercel, Render
+
+🔗 [Live Demo] | 💻 [GitHub]
+
+---
+
+#### PROJECT 4: CinematiQ - Hybrid Movie Recommender
+
+**Overview:**
+Hybrid recommender combining collaborative filtering, content-based, and sentiment analysis.
+
+**Approach:**
+
+1. **Collaborative Filtering (SVD):**
+   ```python
+   # Matrix factorization on 25M ratings
+   SVD(n_factors=100, n_epochs=30, lr=0.005, reg=0.02)
+   RMSE: 0.8623
+   ```
+
+2. **Content-Based:**
+   ```python
+   # TF-IDF on movie "soup"
+   soup = genres + cast + director + overview
+   TfidfVectorizer(max_features=10000, ngram_range=(1,2))
+   cosine_similarity(tfidf_matrix)
+   ```
+
+3. **Sentiment Analysis:**
+   ```python
+   # DistilBERT on IMDb reviews
+   sentiment_analyzer("review_text")
+   Accuracy: 87%
+   ```
+
+4. **Hybrid Score:**
+   ```python
+   final = 0.5*CF + 0.3*Content + 0.2*Sentiment
+   ```
+
+**Results:**
+✅ Precision@10: 0.78  
+✅ NDCG@10: 0.85  
+✅ 15% improvement over pure CF
+
+**Tech:** Python, Scikit-learn, Transformers, Flask, React, TMDB API
+
+🔗 [Live Demo] | 💻 [GitHub]
+
+---
+
+### 7. BLOG SECTION
+
+**Philosophy:**
+Living chronicle of AI/ML journey. Every experiment, breakthrough, challenge documented.
+
+**Design:**
+- Neural-themed layout
+- Posts as "neurons" in knowledge network
+- Hover reveals connections
+- Timeline view of learning progression
+- Tag clouds as neural clusters
+
+**Features:**
+
+1. **Blog Homepage:**
+   ```
+   LEARNING JOURNAL
+   "Documenting my AI/ML journey, one post at a time."
+   
+   [Featured Post - Large card]
+   
+   [Recent Posts Grid - 3 columns]
+   
+   Filters: All | ML | DL | NLP | GenAI | Tutorials | Logs
+   
+   Search: [Real-time]
+   ```
+
+2. **Individual Post:**
+   ```
+   🧠 Fine-Tuning LLaMA 3 on Custom Datasets
+   📅 Jan 30, 2025  •  ⏱️ 8 min read
+   🏷️ #LLMs #LoRA #PEFT
+   
+   [Featured Image]
+   [Content with code highlighting]
+   [Embedded images/diagrams]
+   [Results tables]
+   
+   💬 Share: [Twitter] [LinkedIn] [Copy]
+   📚 Related: [Post 1] [Post 2] [Post 3]
+   ```
+
+3. **Content Types:**
+   - **Tutorials:** Step-by-step with code
+   - **Project Logs:** Daily progress, challenges
+   - **Paper Reviews:** Summaries, implementations
+   - **Quick Tips:** Short-form (2-3 min)
+
+4. **Admin Editor:**
+   - React Quill rich text
+   - Code syntax highlighting
+   - Image upload (Cloudinary)
+   - Tags autocomplete
+   - SEO fields
+   - Draft/Publish
+
+5. **Timeline View:**
+   ```
+   2025
+   ├── January
+   │   ├── 30 - Fine-Tuning LLaMA 3
+   │   ├── 28 - Attention Mechanisms
+   │   └── 25 - Sentiment Analyzer
+   └── December 2024
+       └── 15 - Deep Learning Journey
+   ```
+
+6. **Search & Analytics:**
+   - Full-text search
+   - Filter by category/tags
+   - View count, read time
+   - Popular posts widget
+
+---
+
+### 8. NEURAL DESIGN ELEMENTS
+
+**Global Components:**
+
+1. **Animated Background:**
+   ```javascript
+   // Three.js neural network
+   - 5000 particles (neurons)
+   - Dynamic connections (synapses)
+   - Mouse parallax interaction
+   - Color: Pink-purple gradients
+   ```
+
+2. **Section Connectors:**
+   ```css
+   .synapse-path {
+       /* Vertical line between sections */
+       animation: synapse-fire 2s infinite;
+       /* Pulse glow effect */
+   }
+   
+   .synapse-node {
+       /* Circular junction point */
+       box-shadow: 0 0 20px rgba(255, 0, 128, 0.6);
+       animation: pulse 2s infinite;
+   }
+   ```
+
+3. **Glassmorphism Cards:**
+   ```css
+   .glass-card {
+       background: rgba(255, 255, 255, 0.05);
+       backdrop-filter: blur(10px);
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+   }
+   
+   .glass-card:hover {
+       transform: translateY(-5px) scale(1.02);
+       box-shadow: 0 12px 48px rgba(255, 0, 128, 0.2);
+   }
+   ```
+
+4. **Neural Glow Hover:**
+   ```javascript
+   // Follow mouse with gradient glow
+   onMouseMove={(e) => {
+       const x = e.clientX - rect.left;
+       const y = e.clientY - rect.top;
+       setMousePos({ x, y });
+   }}
+   
+   // CSS
+   .neural-glow {
+       background: radial-gradient(
+           circle,
+           rgba(255, 0, 128, 0.4),
+           transparent 70%
+       );
+       left: var(--mouse-x);
+       top: var(--mouse-y);
+   }
+   ```
+
+5. **Parallax Scrolling:**
+   ```javascript
+   <ParallaxSection speed={-20}>
+       <Background />
+   </ParallaxSection>
+   <ParallaxSection speed={-10}>
+       <Content />
+   </ParallaxSection>
+   ```
+
+6. **Skills Network Graph:**
+   ```javascript
+   // D3.js force-directed graph
+   nodes = [
+       { id: 'Python', group: 'lang', val: 10 },
+       { id: 'PyTorch', group: 'ml', val: 8 },
+       // ...
+   ]
+   
+   links = [
+       { source: 'Python', target: 'PyTorch' },
+       // ...
+   ]
+   ```
+
+---
+
+## 🛠️ TECHNICAL STACK
+
+**Frontend:**
+- React 18 + Vite
+- TailwindCSS
+- Framer Motion (animations)
+- Three.js (3D background)
+- React Router v6
+- Zustand (state)
+- React Quill (blog editor)
+
+**Backend:**
+- Node.js + Express.js
+- MongoDB + Mongoose
+- JWT authentication
+- Bcrypt (passwords)
+- Cloudinary (images)
+- Nodemailer (emails)
+
+**Deployment:**
+- Vercel (frontend)
+- Render (backend)
+- MongoDB Atlas (database)
+- Free tier everything = $0/month
+
+---
+
+## 📊 DATABASE SCHEMA
+
+**Collections:**
+
+1. **User:**
+   ```javascript
+   {
+       name, email, password (hashed),
+       role: 'admin' | 'visitor',
+       avatar, bio, socialLinks,
+       createdAt, lastLogin
+   }
+   ```
+
+2. **BlogPost:**
+   ```javascript
+   {
+       title, slug (unique),
+       excerpt, content (HTML),
+       featuredImage: { url, altText },
+       category, tags [],
+       readTime, views, likes,
+       status: 'draft' | 'published',
+       publishedAt, author,
+       metaDescription
+   }
+   ```
+
+3. **Contact:**
+   ```javascript
+   {
+       name, email, subject, message,
+       status: 'new' | 'read' | 'replied',
+       createdAt
+   }
+   ```
+
+4. **Analytics:**
+   ```javascript
+   {
+       type: 'page_view' | 'project_click' | 'blog_read',
+       page, referrer, userAgent,
+       timestamp
+   }
+   ```
+
+---
+
+## 🚀 DEPLOYMENT
+
+**Frontend (Vercel):**
+```bash
+# Build command
+npm run build
+
+# Output directory
+dist/
+
+# Environment variables
+VITE_API_URL=https://api.dhruvkumar.dev
+VITE_CLOUDINARY_CLOUD_NAME=your_name
+```
+
+**Backend (Render):**
+```bash
+# Start command
+node server.js
+
+# Environment variables
+MONGODB_URI=mongodb+srv://...
+JWT_SECRET=your_secret
+CLOUDINARY_API_KEY=...
+```
+
+**Custom Domains:**
+- Frontend: `dhruvkumar.dev`
+- Backend: `api.dhruvkumar.dev`
+
+---
+
+## ⚡ PERFORMANCE
+
+**Targets:**
+- Lighthouse Score: 90+
+- Load Time: <3s
+- Time to Interactive: <5s
+- Mobile Responsive: 100%
+
+**Optimizations:**
+- Code splitting (lazy load routes)
+- Image optimization (Cloudinary)
+- Three.js instanced rendering
+- MongoDB indexing
+- API caching (10 min TTL)
+- Compression (gzip)
+
+---
+
+## 🔒 SECURITY
+
+1. **Authentication:**
+   - JWT tokens (24h expiry)
+   - Bcrypt (password hashing)
+   - Role-based access
+
+2. **Validation:**
+   - Input sanitization
+   - Email validation
+   - XSS prevention
+
+3. **Rate Limiting:**
+   - Contact form: 3 requests/15min
+   - API: 100 requests/hour
+
+4. **Headers:**
+   - Helmet.js (security headers)
+   - CORS (whitelist frontend)
+   - CSP (Content Security Policy)
+
+---
+
+## 📈 ANALYTICS
+
+**Track:**
+- Page views (by page)
+- Project clicks
+- Blog post reads
+- Contact submissions
+- Top referrers
+
+**Dashboard (Admin):**
+```
+Total Views: 12,340
+Top Pages:
+1. Blog (4,567 views)
+2. Projects (3,456 views)
+3. Home (2,345 views)
+
+Top Projects:
+1. RAG Chatbot (987 clicks)
+2. Artisio (876 clicks)
+
+Top Blog Posts:
+1. "Building RAG" (1,234 reads)
+```
+
+---
+
+## 📅 TIMELINE
+
+**Week 1-2:** Foundation
+- Setup React + Express
+- Database schema
+- Authentication
+- Deployment
+
+**Week 3-4:** Core Pages
+- Homepage hero
+- About, Education, Experience
+- Skills visualization
+- Projects showcase
+
+**Week 5:** Blog System
+- Post schema
+- Admin editor
+- Listing page
+- Individual post
+- Search/filter
+
+**Week 6:** Neural Design
+- Three.js background
+- Section connectors
+- Glassmorphism
+- Animations
+- Parallax
+
+**Week 7:** Polish
+- Responsiveness
+- Performance
+- SEO
+- Testing
+
+**Week 8:** Launch 🚀
+
+---
+
+## 📝 CONTENT STRATEGY
+
+**Blog Posting:**
+- Frequency: 3+ posts/week
+- Length: 1500+ words
+- Code examples: 5+ per tutorial
+- Categories: ML, DL, NLP, GenAI, Projects, Tutorials
+
+**Topics:**
+- "Fine-Tuning LLMs with LoRA"
+- "Building RAG Systems"
+- "Attention Mechanisms Explained"
+- "Feature Engineering Techniques"
+- "My SIH 2025 Journey"
+
+---
+
+## 🎯 SUCCESS METRICS
+
+**Technical:**
+- ✅ Lighthouse: 90+
+- ✅ Load: <3s
+- ✅ Mobile: 100%
+- ✅ Browsers: Chrome, Firefox, Safari, Edge
+
+**Content:**
+- 🎯 3+ blog posts/week
+- 🎯 1500+ words/post
+- 🎯 Complete project docs
+
+**Engagement:**
+- 📈 Monthly views
+- 📈 Avg session: >2min
+- 📈 Blog engagement
+- 📈 Contact inquiries
+
+---
+
+## 🔮 FUTURE ENHANCEMENTS
+
+**Phase 2:**
+- Interactive resume generator (PDF)
+- Dark/light mode toggle
+- Blog comments (Disqus)
+- Newsletter integration (Mailchimp)
+- Multi-language (i18n)
+- Advanced analytics (heatmaps)
+- AI chatbot assistant (RAG-based)
+
+---
+
+## ♿ ACCESSIBILITY
+
+**WCAG 2.1 AA:**
+- Semantic HTML (header, nav, main, article)
+- Keyboard navigation (tab, enter, space)
+- Alt text for images
+- Color contrast: 4.5:1+
+- Screen reader support (ARIA labels)
+- Skip to main content link
+
+---
+
+## 📞 CONTACT
+
+**Dhruv Kumar**  
+📧 kumardhruv2308@gmail.com  
+📱 +91-9625599586  
+🐙 GitHub: [link]  
+💼 LinkedIn: [link]
+
+---
+
+**Version:** 1.0  
+**Updated:** Jan 31, 2025  
+**Status:** Ready for Development 🚀
+
+---

@@ -1,0 +1,32 @@
+### Health Check
+GET http://localhost:5000/
+
+### Get All Projects
+GET http://localhost:5000/api/projects
+
+### Create Project
+POST http://localhost:5000/api/projects
+Content-Type: application/json
+
+{
+  "title": "Neural Portfolio",
+  "description": "A 3D portfolio website built with MERN stack.",
+  "techStack": ["React", "Three.js", "Node.js", "MongoDB"],
+  "repoLink": "https://github.com/example/portfolio",
+  "demoLink": "https://portfolio.example.com",
+  "stats": "Lighthouse 100",
+  "order": 1
+}
+
+### Get Blog Posts
+GET http://localhost:5000/api/blog
+
+### Submit Contact Form
+POST http://localhost:5000/api/contact
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "message": "Hello, I love your portfolio!"
+}
