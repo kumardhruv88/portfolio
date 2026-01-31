@@ -4,6 +4,7 @@ import { FaGithub, FaExternalLinkAlt, FaRocket } from 'react-icons/fa';
 import axios from 'axios';
 
 // Fallback data if API fails or DB is empty
+// Fallback data for Vercel deployment (Serverless cold starts or read-only limits)
 const fallbackProjects = [
   {
     title: "House Price Prediction",
@@ -11,6 +12,9 @@ const fallbackProjects = [
     techStack: ["Python", "Scikit-learn", "XGBoost"],
     stats: "R² = 0.8629",
     color: "from-blue-500 to-cyan-500",
+    repoLink: "https://github.com/kumardhruv88/house_price_prediction",
+    demoLink: "https://house-price-prediction-4v1q.onrender.com/",
+    image: "/projects/house-price.png"
   },
   {
     title: "RAG-Based AI Chatbot",
@@ -18,6 +22,9 @@ const fallbackProjects = [
     techStack: ["FastAPI", "LangChain", "Groq", "PostgreSQL"],
     stats: "Avg response: 2.3s",
     color: "from-purple-500 to-pink-500",
+    repoLink: "https://github.com/kumardhruv88/chatbot",
+    demoLink: "https://chatbot-iota-seven-86.vercel.app/",
+    image: "/projects/chatbot.png"
   },
   {
     title: "ARTISIO E-Commerce",
@@ -25,6 +32,9 @@ const fallbackProjects = [
     techStack: ["React", "Node.js", "MongoDB", "Stripe"],
     stats: "Lighthouse 95+",
     color: "from-orange-500 to-red-500",
+    repoLink: "https://github.com/kumardhruv88/Artisio",
+    demoLink: "https://artisio.vercel.app/",
+    image: "/projects/artisio.png"
   },
   {
     title: "CinematiQ Recommender",
@@ -32,6 +42,9 @@ const fallbackProjects = [
     techStack: ["Python", "Flask", "React", "Transformers"],
     stats: "NDCG@10: 0.85",
     color: "from-green-500 to-emerald-500",
+    repoLink: "https://github.com/kumardhruv88/cinematic",
+    demoLink: "https://cinematic-ochre.vercel.app/",
+    image: "/projects/cinematiq.png"
   },
 ];
 
@@ -127,7 +140,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/projects');
+        const res = await axios.get('/api/projects');
         if (res.data && res.data.length > 0) {
             setProjects(res.data);
         } else {
