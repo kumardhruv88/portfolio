@@ -141,7 +141,7 @@ const Projects = () => {
     const fetchProjects = async () => {
       try {
         const res = await axios.get('/api/projects');
-        if (res.data && res.data.length > 0) {
+        if (Array.isArray(res.data) && res.data.length > 0) {
             setProjects(res.data);
         } else {
             setProjects(fallbackProjects);

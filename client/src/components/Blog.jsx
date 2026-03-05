@@ -3,6 +3,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaCalendar, FaClock } from 'react-icons/fa';
 import axios from 'axios';
 
+const fallbackPosts = [
+    {
+        "id": 1,
+        "slug": "supervised-fine-tuning",
+        "title": "Supervised Fine-Tuning: Transforming Base Models",
+        "excerpt": "Yesterday I learned about Supervised Fine Tuning (SFT) and how it adapts pre-trained base models like LLaMA into instruction-following assistants. It bridges the gap between raw text prediction and helpful interaction.",
+        "content": "<p class=\"mb-4\">Base Large Language Models (LLMs) like LLaMA or GPT-4-base are powerful next-token predictors, but they aren't naturally helpful assistants. They might complete a question with another question rather than answering it. This is where <strong>Supervised Fine-Tuning (SFT)</strong> comes in.</p><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">What is SFT?</h3><p class=\"mb-4\">SFT is the process of training a pre-trained base model on a smaller, high-quality dataset of instruction-response pairs. If pre-training teaches the model \"English\" and \"World Knowledge,\" SFT teaches it \"How to behave.\"</p><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">The Process</h3><ul class=\"list-disc list-inside space-y-2 mb-4 ml-4\"><li><strong>Dataset Collection:</strong> Curating thousands of high-quality (Prompt, Completion) pairs.</li><li><strong>Training:</strong> Updating the model weights to maximize the likelihood of the completion given the prompt.</li><li><strong>Loss Function:</strong> Standard Cross-Entropy Loss is used, masked so we only calculate loss on the response tokens, not the prompt.</li></ul><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">Why it Matters</h3><p>Without SFT, models are just autocomplete engines. With SFT, they become chatbots, code assistants, and reasoning engines. Yesterday's experiment involved fine-tuning a LLaMA-3-8B model on the Alpaca dataset using LoRA (Low-Rank Adaptation), which reduced memory usage by 70% while retaining 95% of performance.</p>",
+        "date": "Jan 30, 2026",
+        "readTime": "5 min read",
+        "tags": ["LLMs", "Fine-Tuning", "SFT"],
+        "imageGradient": "from-pink-500 to-rose-500",
+        "status": "published"
+    },
+    {
+        "id": 2,
+        "slug": "deconstructing-upi",
+        "title": "Deconstructing UPI: A System Design Deep Dive",
+        "excerpt": "Exploring the architectural brilliance behind India's Unified Payments Interface. From NPCI's switch to PSPs and banking layers, understanding how real-time scalable payments work at a billion-scale.",
+        "content": "<p class=\"mb-4\">India's <strong>Unified Payments Interface (UPI)</strong> is a marvel of modern fintech engineering, processing over 10 billion transactions monthly. But how does it handle this scale with near-zero latency?</p><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">Key Components</h3><ul class=\"list-disc list-inside space-y-2 mb-4 ml-4\"><li><strong>NPCI Switch:</strong> The central router that connects all banks. It ensures the request goes from Payer PSP to Payee PSP.</li><li><strong>PSP (Payment Service Provider):</strong> Apps like GPay or PhonePe that provide the frontend interface.</li><li><strong>Banking Core (CBS):</strong> The actual bank ledgers where money is debited and credited.</li></ul><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">The Atomic Transaction Flow</h3><ol class=\"list-decimal list-inside space-y-2 mb-4 ml-4\"><li>User initiates pay request via PSP A.</li><li>PSP A sends request to NPCI Switch.</li><li>NPCI resolves the VPA (Virtual Payment Address) to bank details.</li><li>NPCI pings the Sender's Bank for debit authentication (MPIN).</li><li>Upon success, NPCI signals Receiver's Bank to credit.</li><li>Confirmation flows back: Bank -> NPCI -> PSP -> User.</li></ol><p>All this happens in under 3 seconds. The use of asynchronous messaging queues and highly optimized database locks ensures consistency even during peak loads.</p>",
+        "date": "Jan 28, 2026",
+        "readTime": "8 min read",
+        "tags": ["System Design", "FinTech", "Scalability"],
+        "imageGradient": "from-blue-500 to-indigo-500",
+        "status": "published"
+    },
+    {
+        "id": 3,
+        "slug": "why-llms-hallucinate",
+        "title": "Why Do LLMs Hallucinate? The Probability Trap",
+        "excerpt": "Hallucinations aren't bugs; they are features of probabilistic token generation. We look at why models confidently invent facts and mitigation strategies like RAG and grounding.",
+        "content": "<p class=\"mb-4\">Ask an LLM about a made-up historical event, and it might write a convincing essay about it. This is called <strong>Hallucination</strong>.</p><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">The Root Cause: Next-Token Prediction</h3><p class=\"mb-4\">LLMs don't \"know\" facts. They calculate the probability of the next word. If the most probable continuation of a sentence is a lie (because it sounds plausible based on training data patterns), the model will generate it.</p><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">Temperature & Sampling</h3><p class=\"mb-4\">We use parameters like <code>Temperature</code> to control creativity. High temperature adds randomness, increasing the chance of hallucination. Low temperature makes the model deterministic but repetitive.</p><h3 class=\"text-xl font-bold text-white mb-2 mt-6\">Mitigation Strategies</h3><ul class=\"list-disc list-inside space-y-2 mb-4 ml-4\"><li><strong>RAG (Retrieval-Augmented Generation):</strong> Providing the model with factual context (documents) before it answers.</li><li><strong>Chain of Thought (CoT):</strong> Asking the model to \"think step-by-step\" reduces logic errors.</li><li><strong>Grounding:</strong> Forcing the model to cite sources.</li></ul><p>Understanding hallucinations is key to building reliable AI agents in production.</p>",
+        "date": "Jan 25, 2026",
+        "readTime": "6 min read",
+        "tags": ["GenAI", "Research", "LLMs"],
+        "imageGradient": "from-purple-500 to-violet-500",
+        "status": "published"
+    }
+];
+
 const Blog = () => {
     const [selectedPost, setSelectedPost] = useState(null);
     const [posts, setPosts] = useState([]);
@@ -11,11 +50,15 @@ const Blog = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/blog');
-                setPosts(res.data);
+                const res = await axios.get('/api/blog');
+                if (Array.isArray(res.data) && res.data.length > 0) {
+                    setPosts(res.data);
+                } else {
+                    setPosts(fallbackPosts);
+                }
             } catch (error) {
                 console.error("Failed to fetch blog posts", error);
-                // Fallback would go here if needed, but we rely on backend now
+                setPosts(fallbackPosts);
             } finally {
                 setLoading(false);
             }

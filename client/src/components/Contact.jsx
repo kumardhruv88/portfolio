@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
+import { FaPaperPlane, FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -33,61 +33,80 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 container mx-auto px-4">
-      <div className="max-w-2xl mx-auto glass-card p-8 md:p-12 rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(157,78,221,0.2)]">
-        <h2 className="text-4xl font-display font-bold text-center text-white mb-8">
+      <div className="max-w-5xl mx-auto glass-card p-8 md:p-12 rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(157,78,221,0.2)]">
+        <h2 className="text-4xl font-display font-bold text-center text-white mb-12">
           Initialize <span className="text-highlight">Handshake</span>
         </h2>
         
-        <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col lg:flex-row gap-12">
+            <form onSubmit={handleSubmit} className="space-y-6 flex-1">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                        <label className="text-sm font-space text-gray-400">Identity Name</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            value={form.name} 
+                            onChange={handleChange}
+                            required
+                            className="w-full bg-primary/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-secondary transition-colors"
+                            placeholder="Your Name"
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label className="text-sm font-space text-gray-400">Communication Node (Email)</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            value={form.email} 
+                            onChange={handleChange}
+                            required
+                            className="w-full bg-primary/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-secondary transition-colors"
+                            placeholder="your.email@example.com"
+                        />
+                    </div>
+                </div>
+
                 <div className="space-y-2">
-                    <label className="text-sm font-space text-gray-400">Identity Name</label>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        value={form.name} 
+                    <label className="text-sm font-space text-gray-400">Data Packet (Message)</label>
+                    <textarea 
+                        name="message" 
+                        value={form.message} 
                         onChange={handleChange}
                         required
+                        rows="4"
                         className="w-full bg-primary/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-secondary transition-colors"
-                        placeholder="John Doe"
-                    />
+                        placeholder="Project collaboration inquiry..."
+                    ></textarea>
                 </div>
-                <div className="space-y-2">
-                    <label className="text-sm font-space text-gray-400">Communication Node (Email)</label>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        value={form.email} 
-                        onChange={handleChange}
-                        required
-                        className="w-full bg-primary/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-secondary transition-colors"
-                        placeholder="john@example.com"
-                    />
+
+                <button 
+                    type="submit" 
+                    disabled={status === 'sending'}
+                    className={`w-full py-4 rounded-lg font-bold text-white text-lg transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-2 ${status === 'sending' ? 'bg-gray-600 cursor-not-allowed' : 'bg-gradient-to-r from-secondary to-accent hover:shadow-[0_0_20px_rgba(255,0,128,0.5)]'}`}
+                >
+                    <span>{status === 'sending' ? 'TRANSMITTING...' : status === 'success' ? 'SIGNAL RECEIVED' : status === 'error' ? 'TRANSMISSION FAILED' : 'TRANSMIT SIGNAL'}</span>
+                    {status === 'idle' && <FaPaperPlane />}
+                </button>
+            </form>
+
+            <div className="lg:w-1/3 flex flex-col justify-center space-y-8 pl-4 lg:pl-12">
+                <div className="flex flex-col space-y-1">
+                    <h3 className="text-secondary text-sm font-space uppercase tracking-wider font-bold">Direct Comm Link</h3>
+                    <p className="text-white font-medium text-lg">kumardhruv2308@gmail.com</p>
+                </div>
+                <div className="flex flex-col space-y-1">
+                    <h3 className="text-secondary text-sm font-space uppercase tracking-wider font-bold">Voice Frequency</h3>
+                    <p className="text-white font-medium text-lg">+91 9625599586</p>
+                </div>
+                <div className="flex flex-col space-y-1">
+                    <h3 className="text-secondary text-sm font-space uppercase tracking-wider font-bold">Professional Network</h3>
+                    <a href="https://www.linkedin.com/in/dhruv-kumar-64752327a" target="_blank" rel="noopener noreferrer" className="text-white hover:text-highlight transition-colors font-medium text-lg w-max">
+                        LinkedIn Profile
+                    </a>
                 </div>
             </div>
-
-            <div className="space-y-2">
-                <label className="text-sm font-space text-gray-400">Data Packet (Message)</label>
-                <textarea 
-                    name="message" 
-                    value={form.message} 
-                    onChange={handleChange}
-                    required
-                    rows="4"
-                    className="w-full bg-primary/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-secondary transition-colors"
-                    placeholder="Project collaboration inquiry..."
-                ></textarea>
-            </div>
-
-            <button 
-                type="submit" 
-                disabled={status === 'sending'}
-                className={`w-full py-4 rounded-lg font-bold text-white text-lg transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-2 ${status === 'sending' ? 'bg-gray-600 cursor-not-allowed' : 'bg-gradient-to-r from-secondary to-accent hover:shadow-[0_0_20px_rgba(255,0,128,0.5)]'}`}
-            >
-                <span>{status === 'sending' ? 'TRANSMITTING...' : status === 'success' ? 'SIGNAL RECEIVED' : status === 'error' ? 'TRANSMISSION FAILED' : 'TRANSMIT SIGNAL'}</span>
-                {status === 'idle' && <FaPaperPlane />}
-            </button>
-        </form>
+        </div>
       </div>
     </section>
   );

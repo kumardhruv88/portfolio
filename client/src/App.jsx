@@ -6,7 +6,6 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
-import Blog from './components/Blog';
 import Contact from './components/Contact';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode, SiKaggle } from 'react-icons/si';
@@ -63,7 +62,6 @@ function App() {
         <Experience />
         <Skills />
         <Projects />
-        <Blog />
         <Contact />
       </main>
 
