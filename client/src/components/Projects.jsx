@@ -17,14 +17,14 @@ const fallbackProjects = [
     image: "/projects/house-price.png"
   },
   {
-    title: "RAG-Based AI Chatbot",
-    description: "Production chatbot with web search, document processing, and persistent memory using LangChain & FAISS.",
-    techStack: ["FastAPI", "LangChain", "Groq", "PostgreSQL"],
-    stats: "Avg response: 2.3s",
+    title: "NEXUS AI",
+    description: "An AI that searches the web, understands your documents, and remembers your work.",
+    techStack: ["Groq", "Llama 3", "Next.js", "Tailwind"],
+    stats: "Multimodal Search",
     color: "from-purple-500 to-pink-500",
-    repoLink: "https://github.com/kumardhruv88/chatbot",
-    demoLink: "https://chatbot-iota-seven-86.vercel.app/",
-    image: "/projects/chatbot.png"
+    repoLink: "https://github.com/kumardhruv88/multimodel",
+    demoLink: "https://multimodel-sepia.vercel.app/",
+    image: "/projects/multimodel.png"
   },
   {
     title: "ARTISIO E-Commerce",

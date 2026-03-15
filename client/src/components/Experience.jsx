@@ -14,7 +14,7 @@ const Experience = () => {
         <div className="mb-16 relative pl-8 md:pl-12">
             <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-secondary shadow-[0_0_10px_#ff0080]"></span>
             
-            <div className="max-w-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -33,7 +33,7 @@ const Experience = () => {
                 </div>
 
                 {/* Content Section (Bottom Half) */}
-                <div className="p-4 relative z-10">
+                <div className="p-4 relative z-10 flex flex-col h-[calc(100%-8rem)]">
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                         <h3 className="text-xl font-bold text-white">Winner - Smart India Hackathon 2025</h3>
                         <span className="text-secondary font-mono text-xs">Dec 2024 – Jan 2025</span>
@@ -44,7 +44,7 @@ const Experience = () => {
                         Built AI storytelling system for Indian mythological narratives in multiple native languages.
                     </p>
 
-                    <div className="space-y-4">
+                    <div className="space-y-4 flex-grow">
                         <div>
                             <h5 className="text-white font-bold text-sm uppercase tracking-wide mb-2">Technical Implementation</h5>
                             <ul className="list-disc list-inside text-gray-400 space-y-1 text-sm">
@@ -59,27 +59,96 @@ const Experience = () => {
                                 <span key={tech} className="px-2 py-1 bg-white/5 rounded text-xs text-gray-300 border border-white/5">{tech}</span>
                             ))}
                         </div>
+                    </div>
 
-                         {/* Links */}
-                        <div className="flex items-center justify-between mt-6 pt-6 border-t border-white/10">
-                            <a 
-                                href="https://bharatverse-topaz.vercel.app/" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-sm font-bold text-white hover:text-secondary transition-all flex items-center gap-2 group-hover:translate-x-1 duration-300"
-                            >
-                                Live <span>→</span>
-                            </a>
-                            
-                            <a 
-                                href="https://github.com/kumardhruv88/BharatVerse" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-secondary transition-colors"
-                            >
-                                <FaGithub size={20} />
-                            </a>
+                    {/* Links */}
+                    <div className="flex items-center justify-between mt-6 pt-6 border-t border-white/10">
+                        <a 
+                            href="https://bharatverse-topaz.vercel.app/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-sm font-bold text-white hover:text-secondary transition-all flex items-center gap-2 group-hover:translate-x-1 duration-300"
+                        >
+                            Live <span>→</span>
+                        </a>
+                        
+                        <a 
+                            href="https://github.com/kumardhruv88/BharatVerse" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-secondary transition-colors"
+                        >
+                            <FaGithub size={20} />
+                        </a>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* Safar 360 */}
+            <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="group relative glass-card p-0 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all overflow-hidden"
+            >
+                {/* Image Section (Top Half) */}
+                <div className="relative h-32 w-full overflow-hidden flex-shrink-0">
+                    <img 
+                        src="/projects/safar360.png" 
+                        alt="Safar 360" 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                    />
+                    {/* Subtle Overlay on hover */}
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                </div>
+
+                {/* Content Section (Bottom Half) */}
+                <div className="p-4 relative z-10 flex flex-col h-[calc(100%-8rem)]">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 className="text-xl font-bold text-white">Safar 360</h3>
+                        <span className="text-secondary font-mono text-xs">Hackathon</span>
+                    </div>
+                    <h4 className="text-highlight font-space text-sm mb-3">Developer — VR & AI Travel</h4>
+                    
+                    <p className="text-gray-400 mb-3 text-sm italic">
+                        Your complete travel companion—plan with certainty, travel with confidence. 360° VR Tours & AI Itineraries.
+                    </p>
+
+                    <div className="space-y-4 flex-grow">
+                        <div>
+                            <h5 className="text-white font-bold text-sm uppercase tracking-wide mb-2">Technical Implementation</h5>
+                            <ul className="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                                <li>Interactive 360° VR viewing experience</li>
+                                <li>AI-powered trip itinerary generation</li>
+                                <li>Real-time flight and hidden gems mapping</li>
+                            </ul>
                         </div>
+                        <div className="flex gap-2 flex-wrap">
+                            {['React', 'Next.js', 'Tailwind', 'AI', 'VR'].map((tech) => (
+                                <span key={tech} className="px-2 py-1 bg-white/5 rounded text-xs text-gray-300 border border-white/5">{tech}</span>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex items-center justify-between mt-6 pt-6 border-t border-white/10">
+                        <a 
+                            href="https://safar360.vercel.app/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-sm font-bold text-white hover:text-secondary transition-all flex items-center gap-2 group-hover:translate-x-1 duration-300"
+                        >
+                            Live <span>→</span>
+                        </a>
+                        
+                        <a 
+                            href="https://github.com/kumardhruv88/safar360" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-secondary transition-colors"
+                        >
+                            <FaGithub size={20} />
+                        </a>
                     </div>
                 </div>
             </motion.div>
