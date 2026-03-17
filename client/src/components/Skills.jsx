@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { 
   FaPython, FaJava, FaDatabase, FaReact, FaNodeJs, FaBrain, 
   FaLanguage, FaRobot, FaServer, FaEye, FaGitAlt, FaDocker 
@@ -63,21 +64,20 @@ const Skills = () => {
         {seeds.map((seed, idx) => (
           <div key={idx} className="glass-card p-6 rounded-2xl border-t-2 border-secondary/50 hover:bg-white/5 transition-all">
             <h3 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">{seed.category}</h3>
-            <div className="flex flex-wrap gap-3">
+            <ul className="flex flex-col gap-4 py-2 pl-2">
               {seed.skills.map((skill, sIdx) => {
                 const Icon = skill.icon;
                 return (
-                  <div key={sIdx} className="relative group">
-                      <span className="flex items-center space-x-2 px-3 py-1.5 bg-primary/50 text-gray-300 rounded-lg text-sm border border-white/10 group-hover:border-highlight group-hover:text-white transition-colors cursor-default">
-                          <Icon className={`text-base ${skill.color}`} />
-                          <span>{skill.name}</span>
-                      </span>
-                      {/* Tiny connector dot */}
-                      <span className="absolute -top-1 -right-1 w-2 h-2 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
-                  </div>
+                  <li 
+                      key={sIdx} 
+                      className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors cursor-default"
+                  >
+                      <Icon className={`text-2xl ${skill.color}`} />
+                      <span className="font-medium tracking-wide text-lg">{skill.name}</span>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

@@ -62,8 +62,8 @@ const ProjectCard = ({ project, index }) => {
         <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="group relative glass-card p-0 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full border border-white/5"
+            transition={{ delay: index * 0.1, duration: 0.6 }}
+            className="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden hover:-translate-y-3 transition-all duration-500 flex flex-col h-full border border-white/10 hover:border-secondary/50 shadow-lg hover:shadow-[0_10px_40px_-10px_rgba(255,0,128,0.5)] z-10"
         >
             {/* Image Section (Top Half) */}
             {project.image && (
@@ -127,8 +127,8 @@ const ProjectCard = ({ project, index }) => {
                 </div>
             </div>
             
-            {/* Hover Glow (Optional - kept subtle) */}
-            <div className={`absolute -inset-1 bg-gradient-to-r ${colorClass} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 pointer-events-none`}></div>
+            {/* Hover Glow */}
+            <div className={`absolute -inset-0.5 bg-gradient-to-r ${colorClass} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-700 pointer-events-none -z-10 rounded-2xl`}></div>
         </motion.div>
     )
 }

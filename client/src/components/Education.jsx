@@ -29,7 +29,6 @@ const Education = () => {
             <p className="text-highlight font-space text-lg mb-4">Netaji Subhas University of Technology (NSUT), New Delhi</p>
             <div className="flex justify-between items-center text-gray-400 text-sm mb-6">
                 <span>2023 – 2027</span>
-                <span>CGPA: 7.05/10</span>
             </div>
 
             <div>

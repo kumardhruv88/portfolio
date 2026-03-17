@@ -39,16 +39,16 @@ const About = () => {
         </p>
 
         {/* Interactive Nodes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-6">
             {[
                 { label: 'AI/ML Development', color: 'bg-secondary' },
-                { label: 'Deep Learning', color: 'bg-accent' },
+                { label: 'Deep Learning', color: 'bg-indigo-500' },
                 { label: 'GenAI & LLMs', color: 'bg-highlight' },
                 { label: 'Data Science', color: 'bg-green-500' },
             ].map((skill, index) => (
-                <div key={index} className="flex items-center space-x-3 bg-white/5 p-3 rounded-xl border border-white/5 hover:border-white/20 transition-all hover:translate-x-2 cursor-default">
-                    <span className={`w-3 h-3 rounded-full ${skill.color} shadow-[0_0_10px_currentColor]`}></span>
-                    <span className="font-space text-sm">{skill.label}</span>
+                <div key={index} className="group flex items-center space-x-4 bg-white/5 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-secondary transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_-5px_rgba(255,0,128,0.4)] cursor-default">
+                    <span className={`w-3.5 h-3.5 rounded-full ${skill.color} shadow-[0_0_10px_currentColor] group-hover:animate-pulse`}></span>
+                    <span className="font-space text-sm tracking-wide font-medium">{skill.label}</span>
                 </div>
             ))}
         </div>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ThreeBackground from './components/ThreeBackground';
+import Loading from './components/Loading';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Education from './components/Education';
@@ -11,6 +12,12 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode, SiKaggle } from 'react-icons/si';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    return <Loading onComplete={() => setLoading(false)} />;
+  }
+
   return (
     <div className="relative min-h-screen text-white overflow-x-hidden selection:bg-secondary selection:text-white">
       <ThreeBackground />
